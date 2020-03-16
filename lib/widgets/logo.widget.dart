@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class Logo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // O método column é utilizado para uma coluna estática, enquanto o Listview para uma lista que possa ser feito scroll, dessa forma o column é mais adequado em nosso widget logo.
     return Column(
       children: <Widget>[
         // Método SizedBoz define um tamanho para o widget Listview.

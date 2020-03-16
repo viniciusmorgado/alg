@@ -1,3 +1,4 @@
+import 'package:alg/widgets/logo.widget.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -32,6 +33,12 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       // Utilizando o parametro backgroundcColor nós definimos uma cor de fundo para nossa aplicação e com o método Theme.of(context) nós requisitamos a utilização da paleta de cores primária definida no MyApp.
       backgroundColor: Theme.of(context).primaryColor,
+      // Assim como o <body> em html, porém menos abrangênte sendo que trata-se apenas do corpo do widget.
+      body: ListView(
+        children: <Widget>[
+          // Aqui nós importamos nosso widget logo do arquivo modularizado em lib/widgets
+          Logo()
+      ],),
     );
   }
 }
