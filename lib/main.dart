@@ -38,19 +38,44 @@ class HomePage extends StatelessWidget {
         children: <Widget>[
           // Aqui nós importamos nosso widget logo do arquivo modularizado em lib/widgets
           Logo(),
-          // TextFormField adicionar um campo de digitação (input) a nossa tela.
-          TextFormField(
-            // keyboardtype define que o tipo de teclado apresentado do usuário será de apenas números.
-            keyboardType: TextInputType.number,
-            // Define as configurações de estilo com nosso widget.
-            style: TextStyle(
-              // Parametro para definir a cor do texto.
-              color: Colors.white,
-              // Parametro para definir o tamanho da fonte.
-              fontSize: 45,
-            ),
+          // O método row() nos permite colocar uma linha semântica em nossa aplicação.
+          Row(
+            children: <Widget>[
+              Text("Álcool"),
+              // O método expanded faz nosso widget expandir para toda área disponível dentro do seu widget pai.
+              Expanded(
+                child:
+                    // TextFormField adicionar um campo de digitação (input) a nossa tela.
+                    TextFormField(
+                  // keyboardtype define que o tipo de teclado apresentado do usuário será de apenas números.
+                  keyboardType: TextInputType.number,
+                  // Define as configurações de estilo com nosso widget.
+                  style: TextStyle(
+                    // Parametro para definir a cor do texto.
+                    color: Colors.white,
+                    // Parametro para definir o tamanho da fonte.
+                    fontSize: 45,
+                  ),
+                ),
+              ),
+            ],
           ),
-      ],),
+          Row(
+            children: <Widget>[
+              Text("Gasolina"),
+              Expanded(
+                child: TextFormField(
+                  keyboardType: TextInputType.number,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 45,
+                  ),
+                ),
+              )
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
