@@ -37,7 +37,19 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           // Aqui nós importamos nosso widget logo do arquivo modularizado em lib/widgets
-          Logo()
+          Logo(),
+          // TextFormField adicionar um campo de digitação (input) a nossa tela.
+          TextFormField(
+            // keyboardtype define que o tipo de teclado apresentado do usuário será de apenas números.
+            keyboardType: TextInputType.number,
+            // Define as configurações de estilo com nosso widget.
+            style: TextStyle(
+              // Parametro para definir a cor do texto.
+              color: Colors.white,
+              // Parametro para definir o tamanho da fonte.
+              fontSize: 45,
+            ),
+          ),
       ],),
     );
   }
