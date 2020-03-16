@@ -43,11 +43,16 @@ class HomePage extends StatelessWidget {
               Container(
                 width: 100,
                 alignment: Alignment.centerRight,
+                margin: const EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(3.0),
+                decoration: BoxDecoration(
+                    border: Border.all(color: Theme.of(context).primaryColor)),
                 child: Text(
                   "Álcool",
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 35,
+                    fontSize: 40,
+                    fontFamily: 'BigShouldersDisplay',
                   ),
                 ),
               ),
@@ -66,7 +71,7 @@ class HomePage extends StatelessWidget {
                     // Parametro para definir a cor do texto.
                     color: Colors.white,
                     // Parametro para definir o tamanho da fonte.
-                    fontSize: 45,
+                    fontSize: 20,
                   ),
                 ),
               ),
@@ -77,10 +82,16 @@ class HomePage extends StatelessWidget {
               Container(
                   width: 100,
                   alignment: Alignment.centerRight,
+                  margin: const EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.all(3.0),
+                  decoration: BoxDecoration(
+                      border:
+                          Border.all(color: Theme.of(context).primaryColor)),
                   child: Text("Gasolina",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 35,
+                        fontSize: 40,
+                        fontFamily: 'BigShouldersDisplay',
                       ))),
               SizedBox(
                 width: 20,
