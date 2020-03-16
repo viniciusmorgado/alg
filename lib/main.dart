@@ -11,7 +11,6 @@ class MyApp extends StatelessWidget {
     // Aqui nós retornamos o método MaterialApp que será responsável por definir caracteristicas básicas da nossa aplicação como titulo (não visivel ao usuário) e paleta de cores.
     return MaterialApp(
       // Remove a barra de debug da aplicação.
-      debugShowCheckedModeBanner: false,
       // Title é o parametro que nosso método MaterialApp usa para definir o titulo da aplicação em seu core, o mesmo não é visivel para o usuário mais é definido por um questão semântica.
       title: 'Álcool ou Gasolina',
       // theme é o parametro dentro de nosso método MaterialApp que é capaz de receber métodos para personalização geral da nossa aplicação, como por exemplo alteração  a paleta de cores, no exemplo abaixo ele recebe o método ThemeData() que possui parametros como o primarySwtch: que nos permite alterar a paleta de cores geral que será usada por toda a aplicação.
