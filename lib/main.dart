@@ -40,7 +40,17 @@ class HomePage extends StatelessWidget {
           // O método row() nos permite colocar uma linha semântica em nossa aplicação.
           Row(
             children: <Widget>[
-              Text("Álcool"),
+              Container(
+                width: 100,
+                alignment: Alignment.centerRight,
+                child: Text(
+                  "Álcool",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 35,
+                  ),
+                ),
+              ),
               // O método expanded faz nosso widget expandir para toda área disponível dentro do seu widget pai.
               Expanded(
                 child:
@@ -61,7 +71,14 @@ class HomePage extends StatelessWidget {
           ),
           Row(
             children: <Widget>[
-              Text("Gasolina"),
+              Container(
+                  width: 100,
+                  alignment: Alignment.centerRight,
+                  child: Text("Gasolina",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 35,
+                      ))),
               Expanded(
                 child: TextFormField(
                   keyboardType: TextInputType.number,
