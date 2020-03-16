@@ -52,6 +52,9 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               // O método expanded faz nosso widget expandir para toda área disponível dentro do seu widget pai.
+              SizedBox(
+                width: 20,
+              ),
               Expanded(
                 child:
                     // TextFormField adicionar um campo de digitação (input) a nossa tela.
@@ -79,6 +82,9 @@ class HomePage extends StatelessWidget {
                         color: Colors.white,
                         fontSize: 35,
                       ))),
+              SizedBox(
+                width: 20,
+              ),
               Expanded(
                 child: TextFormField(
                   keyboardType: TextInputType.number,
