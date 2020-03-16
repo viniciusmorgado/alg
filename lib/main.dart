@@ -24,40 +24,14 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// Classe principal que constroe o corpo da nossa aplicação sobre um widget Stateless.
+// Classe principal que constroe o corpo da nossa aplicação sobre um widget Stateless, a mesma é uma classe herança da classe global stateless
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Scaffold é à função responsável por implementar a estrutura base do layout Material Design, diferente do container que é responsável por ser uma forma conveniênte de alinhar tamanho e posicionamento de diferentes widgets.
     return Scaffold(
-        // Utilizando o parametro backgroundcColor nós definimos uma cor de fundo para nossa aplicação e com o método Theme.of(context) nós requisitamos a utilização da paleta de cores primária definida no MyApp.
-        backgroundColor: Theme.of(context).primaryColor,
-
-        // body é o marametro do Scaffold que nos permite definir as carasteristicas do corpo do nosso widget, similar ao <body> do HTML porém menos abrangênte já que o parametro se aplica apenas o widget da classe HomePage.
-        // O método ListView é utilizado para organizar items de uma lista de forma prática, em nosso caso ele será muito útil já que nossos widgets principais ficaram dispotos um embaixo do outro.
-        body: ListView(
-          children: <Widget>[
-            // Método SizedBoz define um tamanho para o widget Listview.
-            SizedBox(height: 60),
-            // Método Image está utilizando a função asset para acessar uma imagem especifica dentro do diretório do projeto e imprimi-lo na tela, nessa caso a imagem da nossa logo.
-            Image.asset(
-              "assets/images/aog-white.png",
-              // parametro height define o tamanho da imagem.
-              height: 80,
-            ),
-            SizedBox(height: 10),
-            // Método Text está criando o texto "Àlcool e Gasoline" e utilizando parametros já vistos anteriormente definindo as propriedades desse widget de texto como fonte, cor etc.
-            Text(
-              "Álcool ou Gasolina",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 25,
-                //fontFamily: "BigShouldersDisplay"
-              ),
-              // textAlign o parametro está alinhando o widget de texto que foi definido anteriormente incluindo todas suas propriedades.
-              textAlign: TextAlign.center,
-            ),
-          ],
-        ));
+      // Utilizando o parametro backgroundcColor nós definimos uma cor de fundo para nossa aplicação e com o método Theme.of(context) nós requisitamos a utilização da paleta de cores primária definida no MyApp.
+      backgroundColor: Theme.of(context).primaryColor,
+    );
   }
 }
