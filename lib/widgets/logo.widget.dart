@@ -1,32 +1,16 @@
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-class Logo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-        // O método ListView é utilizado para organizar items de uma lista de forma prática, em nosso caso ele será muito útil já que nossos widgets principais ficaram dispotos um embaixo do outro.
-          children: <Widget>[
-            // Método SizedBoz define um tamanho para o widget Listview.
-            SizedBox(height: 60),
-            // Método Image está utilizando a função asset para acessar uma imagem especifica dentro do diretório do projeto e imprimi-lo na tela, nessa caso a imagem da nossa logo.
-            Image.asset(
-              "assets/images/aog-white.png",
-              // parametro height define o tamanho da imagem.
-              height: 80,
-            ),
-            SizedBox(height: 10),
-            // Método Text está criando o texto "Àlcool e Gasoline" e utilizando parametros já vistos anteriormente definindo as propriedades desse widget de texto como fonte, cor etc.
-            Text(
-              "Álcool ou Gasolina",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 25,
-                //fontFamily: "BigShouldersDisplay"
-              ),
-              // textAlign o parametro está alinhando o widget de texto que foi definido anteriormente incluindo todas suas propriedades.
-              textAlign: TextAlign.center,
-            ),
-          ],
-        );
-  }
-}
+// class logo extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       backgroundColor: Theme.of(context).primaryColor,
+//       body: ListView(
+//         children: <Widget>[
+//           SizedBox (height: 60)
+
+//         ],
+//       )
+//     );
+//   }
+// }
