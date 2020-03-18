@@ -70,6 +70,18 @@ flutter:
         - asset: assets/fonts/Ubuntu/Ubuntu-Medium.ttf
         - asset: assets/fonts/Ubuntu/Ubuntu-Mediumitalic.ttf
         - asset: assets/fonts/Ubuntu/Ubuntu-Regular.ttf
+    - family: OpenSans
+      fonts:
+        - asset: assets/fonts/Open-Sans/OpenSans-Bold.ttf
+        - asset: assets/fonts/Open-Sans/OpenSans-Bolditalic.ttf
+        - asset: assets/fonts/Open-Sans/OpenSans-ExtraBold.ttf
+        - asset: assets/fonts/Open-Sans/OpenSans-ExtraBolditalic.ttf
+        - asset: assets/fonts/Open-Sans/OpenSans-Italic.ttf
+        - asset: assets/fonts/Open-Sans/OpenSans-Light.ttf
+        - asset: assets/fonts/Open-Sans/OpenSans-Lightitalic.ttf
+        - asset: assets/fonts/Open-Sans/OpenSans-Regular.ttf
+        - asset: assets/fonts/Open-Sans/OpenSans-SemiBold.ttf
+        - asset: assets/fonts/Open-Sans/OpenSans-SemiBoldItalic.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
