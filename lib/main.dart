@@ -3,6 +3,8 @@ import 'package:alg/widgets/logo.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
 
+import 'widgets/button.widget.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -29,6 +31,7 @@ class MyApp extends StatelessWidget {
 // Classe principal que constroe o corpo da nossa aplicação sobre um widget Stateless.
 class HomePage extends StatelessWidget {
   var _gasCtrl = new MoneyMaskedTextController();
+  var _alcCtrl = new MoneyMaskedTextController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,8 +41,17 @@ class HomePage extends StatelessWidget {
           // Importa o logo do arquivo lib/widget/logo.widget.dart
           Logo(),
           // Importa o TextFormField do arquivo lib;widget/input.widget.dart
-          Input(),
-          Input(),
+          Input(
+            label: "Álcool",
+            ctrl: _alcCtrl,
+          ),
+          // Importa o TextFormField do arquivo lib/widget/input.widget.dart
+          Input(
+            label: "Gasolina",
+            ctrl: _gasCtrl,
+          ),
+          // Importa o TextFormField do arquivo lib/widget/button.widget.dart
+          Button(),
         ],
       ),
     );
