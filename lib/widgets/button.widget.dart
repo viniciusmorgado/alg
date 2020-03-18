@@ -16,7 +16,7 @@ class Button extends StatelessWidget {
           style: TextStyle(
             color: Theme.of(context).primaryColor,
             fontSize: 25,
-            fontFamily: "Ubuntu",
+            fontFamily: "OpenSans",
           ),
         ),
         onPressed: () {},

@@ -29,7 +29,7 @@ class Input extends StatelessWidget {
             style: TextStyle(
               color: Colors.white,
               fontSize: 20,
-              fontFamily: "Ubuntu",
+              fontFamily: "OpenSans",
             ),
           ),
         ),
@@ -43,7 +43,7 @@ class Input extends StatelessWidget {
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 25,
-                fontFamily: "Ubuntu",
+                fontFamily: "OpenSans",
               ),
               decoration: InputDecoration(
                 // A propriedade InputBorder.none serve para remover bordas de widgets, nesse caso estamos utilizando para remover a linha que aparece na borda do TextFormField.

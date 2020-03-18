@@ -21,7 +21,7 @@ class Logo extends StatelessWidget {
           style: TextStyle(
             color: Colors.white,
             fontSize: 25,
-            fontFamily: "Ubuntu"
+            fontFamily: "OpenSans"
           ),
           // textAlign o parametro está alinhando o widget de texto que foi definido anteriormente incluindo todas suas propriedades.
           textAlign: TextAlign.center,
