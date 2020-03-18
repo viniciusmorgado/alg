@@ -20,7 +20,7 @@ class Input extends StatelessWidget {
         Container(
           width: 100,
           alignment: Alignment.centerRight,
-          margin: const EdgeInsets.all(15.0),
+          margin: const EdgeInsets.all(15),
           padding: const EdgeInsets.all(3.0),
           decoration: BoxDecoration(
               border: Border.all(color: Theme.of(context).primaryColor)),
@@ -28,8 +28,8 @@ class Input extends StatelessWidget {
             label,
             style: TextStyle(
               color: Colors.white,
-              fontSize: 40,
-              fontFamily: 'BigShouldersDisplay',
+              fontSize: 20,
+              fontFamily: "Ubuntu",
             ),
           ),
         ),
@@ -41,9 +41,9 @@ class Input extends StatelessWidget {
               controller: ctrl,
               keyboardType: TextInputType.number,
               style: TextStyle(
-                //Opacity(opacity: 0.0),
                 color: Colors.white,
-                fontSize: 20,
+                fontSize: 25,
+                fontFamily: "Ubuntu",
               ),
               decoration: InputDecoration(
                 // A propriedade InputBorder.none serve para remover bordas de widgets, nesse caso estamos utilizando para remover a linha que aparece na borda do TextFormField.
