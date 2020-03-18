@@ -1,6 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_masked_text/flutter_masked_text.dart';
 
 class Input extends StatelessWidget {
+  // O trecho a seguir serve para repassarmos informações para nossos widgets.
+  var label = "";
+  // Variavel control que recebe como valor o nosso método MoneyMaskedTextController() para gasolina
+  var ctrl = new MoneyMaskedTextController();
+
+  // Consultor da classe input, o parametro @required é o que definira as informações que devem ser passadas a função sempre que ele foi requisitado, ex: Input(Label: "Álcool", ctrl:"_gasCtrl");
+  Input({
+    @required this.label,
+    @required this.ctrl,
+  });
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -13,7 +25,7 @@ class Input extends StatelessWidget {
           decoration: BoxDecoration(
               border: Border.all(color: Theme.of(context).primaryColor)),
           child: Text(
-            "Álcool",
+            label,
             style: TextStyle(
               color: Colors.white,
               fontSize: 40,
@@ -26,9 +38,10 @@ class Input extends StatelessWidget {
         ),
         Expanded(
           child: TextFormField(
-              controller: _gasCtrl,
+              controller: ctrl,
               keyboardType: TextInputType.number,
               style: TextStyle(
+                //Opacity(opacity: 0.0),
                 color: Colors.white,
                 fontSize: 20,
               ),
