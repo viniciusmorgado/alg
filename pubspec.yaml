@@ -59,7 +59,17 @@ flutter:
   fonts:
     - family: BigShouldersDisplay
       fonts:
-        - asset: assets/fonts/BigShouldersDisplay-Light.ttf
+        - asset: assets/fonts/BigShouldersDisplay/BigShouldersDisplay-Light.ttf
+    - family: Ubuntu
+      fonts:
+        - asset: assets/fonts/Ubuntu/Ubuntu-Bold.ttf
+        - asset: assets/fonts/Ubuntu/Ubuntu-Bolditalic.ttf
+        - asset: assets/fonts/Ubuntu/Ubuntu-Italic.ttf
+        - asset: assets/fonts/Ubuntu/Ubuntu-Light.ttf
+        - asset: assets/fonts/Ubuntu/Ubuntu-Lightitalic.ttf
+        - asset: assets/fonts/Ubuntu/Ubuntu-Medium.ttf
+        - asset: assets/fonts/Ubuntu/Ubuntu-Mediumitalic.ttf
+        - asset: assets/fonts/Ubuntu/Ubuntu-Regular.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
