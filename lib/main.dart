@@ -1,5 +1,7 @@
+import 'package:alg/widgets/input.widget.dart';
 import 'package:alg/widgets/logo.widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_masked_text/flutter_masked_text.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,87 +28,18 @@ class MyApp extends StatelessWidget {
 
 // Classe principal que constroe o corpo da nossa aplicação sobre um widget Stateless.
 class HomePage extends StatelessWidget {
+  var _gasCtrl = new MoneyMaskedTextController();
   @override
   Widget build(BuildContext context) {
-    // Scaffold é à função responsável por implementar a estrutura base do layout Material Design, diferente do container que é responsável por ser uma forma conveniênte de alinhar tamanho e posicionamento de diferentes widgets.
     return Scaffold(
-      // Utilizando o parametro backgroundcColor nós definimos uma cor de fundo para nossa aplicação e com o método Theme.of(context) nós requisitamos a utilização da paleta de cores primária definida no MyApp.
       backgroundColor: Theme.of(context).primaryColor,
-      // Assim como o <body> em html, porém menos abrangênte sendo que trata-se apenas do corpo do widget.
       body: ListView(
         children: <Widget>[
-          // Aqui nós importamos nosso widget logo do arquivo modularizado em lib/widgets
+          // Importa o logo do arquivo lib/widget/logo.widget.dart
           Logo(),
-          // O método row() nos permite colocar uma linha semântica em nossa aplicação.
-          Row(
-            children: <Widget>[
-              Container(
-                width: 100,
-                alignment: Alignment.centerRight,
-                margin: const EdgeInsets.all(15.0),
-                padding: const EdgeInsets.all(3.0),
-                decoration: BoxDecoration(
-                    border: Border.all(color: Theme.of(context).primaryColor)),
-                child: Text(
-                  "Álcool",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 40,
-                    fontFamily: 'BigShouldersDisplay',
-                  ),
-                ),
-              ),
-              // O método expanded faz nosso widget expandir para toda área disponível dentro do seu widget pai.
-              SizedBox(
-                width: 20,
-              ),
-              Expanded(
-                child:
-                    // TextFormField adicionar um campo de digitação (input) a nossa tela.
-                    TextFormField(
-                  // keyboardtype define que o tipo de teclado apresentado do usuário será de apenas números.
-                  keyboardType: TextInputType.number,
-                  // Define as configurações de estilo com nosso widget.
-                  style: TextStyle(
-                    // Parametro para definir a cor do texto.
-                    color: Colors.white,
-                    // Parametro para definir o tamanho da fonte.
-                    fontSize: 20,
-                  ),
-                ),
-              ),
-            ],
-          ),
-          Row(
-            children: <Widget>[
-              Container(
-                  width: 100,
-                  alignment: Alignment.centerRight,
-                  margin: const EdgeInsets.all(15.0),
-                  padding: const EdgeInsets.all(3.0),
-                  decoration: BoxDecoration(
-                      border:
-                          Border.all(color: Theme.of(context).primaryColor)),
-                  child: Text("Gasolina",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 40,
-                        fontFamily: 'BigShouldersDisplay',
-                      ))),
-              SizedBox(
-                width: 20,
-              ),
-              Expanded(
-                child: TextFormField(
-                  keyboardType: TextInputType.number,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 45,
-                  ),
-                ),
-              )
-            ],
-          ),
+          // Importa o TextFormField do arquivo lib;widget/input.widget.dart
+          Input(),
+          Input(),
         ],
       ),
     );
