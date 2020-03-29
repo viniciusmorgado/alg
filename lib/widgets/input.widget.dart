@@ -18,7 +18,7 @@ class Input extends StatelessWidget {
     return Row(
       children: <Widget>[
         Container(
-          width: 100,
+          width: 90,
           alignment: Alignment.centerRight,
           margin: const EdgeInsets.all(15),
           padding: const EdgeInsets.all(3.0),

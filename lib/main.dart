@@ -40,6 +40,13 @@ class HomePage extends StatelessWidget {
         children: <Widget>[
           // Importa o logo do arquivo lib/widget/logo.widget.dart
           Logo(),
+          Container(
+            margin: EdgeInsets.all(30),
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.8),
+              borderRadius: BorderRadius.circular(25),
+            ),
+          ),
           // Container utilizado apenas para separar em 50px o logo dos inputs
           Container(height: 50),
           // Importa o TextFormField do arquivo lib;widget/input.widget.dart
