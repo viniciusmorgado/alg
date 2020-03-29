@@ -79,7 +79,7 @@ class HomePage extends StatelessWidget {
           // Importa o TextFormField do arquivo lib/widget/input.widget.dart
           Input(
             label: "Gasolina",
-            ctrl: _gasCtrl,
+            ctrl: _gasCtrl, 
           ),
           // Importa o TextFormField do arquivo lib/widget/button.widget.dart
           // Button(),
