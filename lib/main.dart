@@ -84,7 +84,7 @@ class HomePage extends StatelessWidget {
           // Importa o TextFormField do arquivo lib/widget/button.widget.dart
           // Button(),
           LoadingButton(
-            busy: false,
+            busy: true,
             func: () {},
             text: "CALCULAR",
             invert: false,
