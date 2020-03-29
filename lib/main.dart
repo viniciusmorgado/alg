@@ -41,10 +41,9 @@ class HomePage extends StatelessWidget {
         children: <Widget>[
           // Importa o logo do arquivo lib/widget/logo.widget.dart
           Logo(),
-          // Importa o container success
           Success(
-            reset: () {},
-            result: "Compensa utilizar X",
+            reset: (){},
+            result: "Compensar utilizar X",
           ),
           // Container utilizado apenas para separar em 50px o logo dos inputs
           Container(height: 2),
@@ -61,7 +60,7 @@ class HomePage extends StatelessWidget {
           // Importa o TextFormField do arquivo lib/widget/button.widget.dart
           // Button(),
           LoadingButton(
-            busy: true,
+            busy: false,
             func: () {},
             text: "CALCULAR",
             invert: false,
