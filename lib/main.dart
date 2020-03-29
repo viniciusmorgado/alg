@@ -53,7 +53,7 @@ class HomePage extends StatelessWidget {
                   height: 10,
                 ),
                 Text(
-                  "Compensa utilizar álcool",
+                  "Compensa utilizar álcool !",
                   style: TextStyle(
                       color: Theme.of(context).primaryColor,
                       fontSize: 20,
@@ -64,7 +64,7 @@ class HomePage extends StatelessWidget {
                   busy: false,
                   func: () {},
                   text: "CALCULAR NOVAMENTE",
-                  invert: false,
+                  invert: true,
                 ),
               ],
             ),
