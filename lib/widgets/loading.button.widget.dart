@@ -13,7 +13,7 @@ class LoadingButton extends StatelessWidget {
     @required this.invert,
     @required this.text,
   }
-  )
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -22,15 +22,18 @@ class LoadingButton extends StatelessWidget {
       margin: EdgeInsets.all(30),
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: invert ? Theme.of(context).primaryColor
+        : Colors.white.withOpacity(0.8),
         borderRadius: BorderRadius.circular(50),
       ),
       child: FlatButton(
         child: Text(
           text,
           style: TextStyle(
-            color: Theme.of(context).primaryColor,
-            fontSize: 25,
+            color: 
+            invert ? Colors.white 
+            : Theme.of(context).primaryColor,
+            fontSize: 15,
             fontFamily: "OpenSans",
           ),
         ),
