@@ -7,6 +7,14 @@ class LoadingButton extends StatelessWidget {
   Function func;
   var text = "";
 
+  LoadingButton({
+    @required this.busy,
+    @required this.func,
+    @required this.invert,
+    @required this.text,
+  }
+  )
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,14 +27,14 @@ class LoadingButton extends StatelessWidget {
       ),
       child: FlatButton(
         child: Text(
-          "CALCULAR",
+          text,
           style: TextStyle(
             color: Theme.of(context).primaryColor,
             fontSize: 25,
             fontFamily: "OpenSans",
           ),
         ),
-        onPressed: () {},
+        onPressed: func,
       ),
     );
   }
