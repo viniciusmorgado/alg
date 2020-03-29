@@ -1,4 +1,5 @@
 import 'package:alg/widgets/input.widget.dart';
+import 'package:alg/widgets/loading.button.widget.dart';
 import 'package:alg/widgets/logo.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
@@ -46,23 +47,27 @@ class HomePage extends StatelessWidget {
               color: Colors.white.withOpacity(0.8),
               borderRadius: BorderRadius.circular(25),
             ),
-          child: Column(
-            children: <Widget>[
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                "Compensa utilizar álcool",
-                style: TextStyle(
-                  color: Theme.of(context).primaryColor,
-                  fontSize: 20,
-                  fontFamily: "OpenSans"
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 10,
                 ),
-                textAlign: TextAlign.center,
-              ),
-              Button(),
-            ],
-          ),
+                Text(
+                  "Compensa utilizar álcool",
+                  style: TextStyle(
+                      color: Theme.of(context).primaryColor,
+                      fontSize: 20,
+                      fontFamily: "OpenSans"),
+                  textAlign: TextAlign.center,
+                ),
+                LoadingButton(
+                  busy: false,
+                  func: () {},
+                  text: "CALCULAR NOVAMENTE",
+                  invert: false,
+                ),
+              ],
+            ),
           ),
           // Container utilizado apenas para separar em 50px o logo dos inputs
           Container(height: 2),
@@ -77,7 +82,13 @@ class HomePage extends StatelessWidget {
             ctrl: _gasCtrl,
           ),
           // Importa o TextFormField do arquivo lib/widget/button.widget.dart
-          Button(),
+          // Button(),
+          LoadingButton(
+            busy: false,
+            func: () {},
+            text: "CALCULAR",
+            invert: false,
+          ),
         ],
       ),
     );
