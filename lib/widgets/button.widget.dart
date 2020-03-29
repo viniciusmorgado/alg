@@ -6,6 +6,7 @@ class Button extends StatelessWidget {
     return Container(
       height: 60,
       margin: EdgeInsets.all(30),
+      width: double.infinity,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(50),
