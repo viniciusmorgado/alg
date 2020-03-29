@@ -17,7 +17,15 @@ class LoadingButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return 
+    busy ? Container(
+              alignment: Alignment.center,
+              height: 50,
+              child: CircularProgressIndicator(
+                backgroundColor: Colors.white,
+              ),
+    ) :   
+    Container(
       height: 60,
       margin: EdgeInsets.all(30),
       width: double.infinity,
