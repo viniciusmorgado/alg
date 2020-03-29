@@ -46,9 +46,26 @@ class HomePage extends StatelessWidget {
               color: Colors.white.withOpacity(0.8),
               borderRadius: BorderRadius.circular(25),
             ),
+          child: Column(
+            children: <Widget>[
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                "Compensa utilizar álcool",
+                style: TextStyle(
+                  color: Theme.of(context).primaryColor,
+                  fontSize: 20,
+                  fontFamily: "OpenSans"
+                ),
+                textAlign: TextAlign.center,
+              ),
+              Button(),
+            ],
+          ),
           ),
           // Container utilizado apenas para separar em 50px o logo dos inputs
-          Container(height: 50),
+          Container(height: 2),
           // Importa o TextFormField do arquivo lib;widget/input.widget.dart
           Input(
             label: "Álcool",
