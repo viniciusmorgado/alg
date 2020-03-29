@@ -19,10 +19,7 @@ class Logo extends StatelessWidget {
         Text(
           "Álcool ou Gasolina",
           style: TextStyle(
-            color: Colors.white,
-            fontSize: 25,
-            fontFamily: "OpenSans"
-          ),
+              color: Colors.white, fontSize: 25, fontFamily: "OpenSans"),
           // textAlign o parametro está alinhando o widget de texto que foi definido anteriormente incluindo todas suas propriedades.
           textAlign: TextAlign.center,
         ),
