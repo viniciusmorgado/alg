@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
 import 'loading.button.widget.dart';
 
-class SubmitForm extends StatelessWidget {
+class SubmitForm extends StatefulWidget {
   var gasCtrl = new MoneyMaskedTextController();
   var alcCtrl = new MoneyMaskedTextController();
   var busy = false;
@@ -17,6 +17,11 @@ class SubmitForm extends StatelessWidget {
   });
 
   @override
+  _SubmitFormState createState() => _SubmitFormState();
+}
+
+class _SubmitFormState extends State<SubmitForm> {
+  @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
@@ -27,7 +32,7 @@ class SubmitForm extends StatelessWidget {
           ),
           child: Input(
             label: "Gasolina",
-            ctrl: gasCtrl,
+            ctrl: widget.gasCtrl,
           ),
         ),
         Padding(
@@ -37,12 +42,12 @@ class SubmitForm extends StatelessWidget {
           ),
           child: Input(
             label: "Álcool",
-            ctrl: alcCtrl,
+            ctrl: widget.alcCtrl,
           ),
         ),
         LoadingButton(
-          busy: busy,
-          func: submitFunc,
+          busy: widget.busy,
+          func: widget.submitFunc,
           text: "CALCULAR",
           invert: false,
         ),

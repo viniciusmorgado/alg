@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class LoadingButton extends StatelessWidget {
+class LoadingButton extends StatefulWidget {
   var busy = false;
   var invert = false;
   Function func;
@@ -14,8 +14,13 @@ class LoadingButton extends StatelessWidget {
   });
 
   @override
+  _LoadingButtonState createState() => _LoadingButtonState();
+}
+
+class _LoadingButtonState extends State<LoadingButton> {
+  @override
   Widget build(BuildContext context) {
-    return busy
+    return widget.busy
         ? Container(
             alignment: Alignment.center,
             height: 50,
@@ -28,21 +33,21 @@ class LoadingButton extends StatelessWidget {
             margin: EdgeInsets.all(30),
             width: double.infinity,
             decoration: BoxDecoration(
-              color: invert
+              color: widget.invert
                   ? Theme.of(context).primaryColor
                   : Colors.white.withOpacity(0.8),
               borderRadius: BorderRadius.circular(50),
             ),
             child: FlatButton(
               child: Text(
-                text,
+                widget.text,
                 style: TextStyle(
-                  color: invert ? Colors.white : Theme.of(context).primaryColor,
+                  color: widget.invert ? Colors.white : Theme.of(context).primaryColor,
                   fontSize: 15,
                   fontFamily: "OpenSans",
                 ),
               ),
-              onPressed: func,
+              onPressed: widget.func,
             ),
           );
   }
