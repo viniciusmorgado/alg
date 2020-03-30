@@ -2,12 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
 
 class Input extends StatelessWidget {
-  // O trecho a seguir serve para repassarmos informações para nossos widgets.
   var label = "";
-  // Variavel control que recebe como valor o nosso método MoneyMaskedTextController() para gasolina
   var ctrl = new MoneyMaskedTextController();
 
-  // Consultor da classe input, o parametro @required é o que definira as informações que devem ser passadas a função sempre que ele foi requisitado, ex: Input(Label: "Álcool", ctrl:"_gasCtrl");
   Input({
     @required this.label,
     @required this.ctrl,
@@ -46,7 +43,6 @@ class Input extends StatelessWidget {
                 fontFamily: "OpenSans",
               ),
               decoration: InputDecoration(
-                // A propriedade InputBorder.none serve para remover bordas de widgets, nesse caso estamos utilizando para remover a linha que aparece na borda do TextFormField.
                 border: InputBorder.none,
               )),
         ),

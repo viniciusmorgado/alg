@@ -1,6 +1,7 @@
 import 'package:alg/widgets/input.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
+import 'loading.button.widget.dart';
 
 class SubmitForm extends StatelessWidget {
   var gasCtrl = new MoneyMaskedTextController();
@@ -28,6 +29,22 @@ class SubmitForm extends StatelessWidget {
             label: "Gasolina",
             ctrl: gasCtrl,
           ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(
+            left: 30,
+            right: 30,
+          ),
+          child: Input(
+            label: "Álcool",
+            ctrl: alcCtrl,
+          ),
+        ),
+        LoadingButton(
+          busy: busy,
+          func: submitFunc,
+          text: "CALCULAR",
+          invert: false,
         ),
       ],
     );
