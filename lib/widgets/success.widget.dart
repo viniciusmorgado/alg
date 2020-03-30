@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'loading.button.widget.dart';
 
 class Success extends StatefulWidget {
-  String result = "";
+  var result = "";
   Function reset;
 
   Success({
