@@ -63,12 +63,13 @@ class _HomePageState extends State<HomePage> {
       });
     });
   }
-    reset() {
-      setState(() {
-        _alcCtrl = new MoneyMaskedTextController();
-        _gasCtrl = new MoneyMaskedTextController();
-        _busy = false;
-        _completed = false;
-      });
-    }
+
+  reset() {
+    setState(() {
+      _alcCtrl = new MoneyMaskedTextController();
+      _gasCtrl = new MoneyMaskedTextController();
+      _busy = false;
+      _completed = false;
+    });
   }
+}
